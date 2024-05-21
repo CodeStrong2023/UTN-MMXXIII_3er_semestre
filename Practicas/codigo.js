@@ -1,5 +1,7 @@
 const jugada = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
+const reiniciar =() => { location.reload();}
+
 const eleccion = (jugada) => {
     if (jugada == 1) {
         return "Piedra 🥌";
@@ -11,6 +13,9 @@ const eleccion = (jugada) => {
         return "Opcion no valida";
     }
 }
+
+
+
 
 
 // 1 piedra, 2 papel 3 tijeta
@@ -49,5 +54,8 @@ while (triunfos < 3 && perdidas < 3) {
         alert("Elegiste Perder");
         perdidas++;
     }
-    alert("Ganaste: " + triunfos + " veces." + " Perdidas: " + perdidas + " veces.");
 }
+
+
+
+    alert("Ganaste: " + triunfos + " veces." + " Perdidas: " + perdidas + " veces.");
