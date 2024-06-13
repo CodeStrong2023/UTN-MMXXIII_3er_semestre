@@ -1,11 +1,15 @@
 function seleccionarPersonajeJugador(){ 
- 
     let personajeSeleccionado = document.querySelector('input[name="personaje"]:checked');
-    console.log(personajeSeleccionado.id);
+    let spanPersonajeJugador= document.getElementById('personaje-jugador');
+    let spanPersonajeEnemigo= document.getElementById('personaje-enemigo');
+    const personajeEnemigo = ["Zuko", "Katara", "Aang", "Toph"]
+
 
     // Verificar si se seleccionó un personaje
     if(personajeSeleccionado) {
-        alert('Seleccionaste a: ' + personajeSeleccionado.id);
+        spanPersonajeJugador.innerHTML = personajeSeleccionado.id;
+        spanPersonajeEnemigo.innerHTML = personajeEnemigo[Math.floor(Math.random() * personajeEnemigo.length)];
+
     } else {
         alert('Por favor selecciona un personaje');
     }
